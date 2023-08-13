@@ -73,4 +73,14 @@ The Daily News React Web App is a dynamic and user-friendly web application that
 - React Router: Library for handling navigation within a React application.
 - News API: External API used to fetch news articles from various sources.
 
-Stay informed and engaged with the world's latest news through the Daily News React Web App. Explore articles, save your favorites, and enjoy a seamless news browsing experience.
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -5,8 +5,8 @@ import React from 'react';
 const About = (props) => {
   return (
     <div className='container' style={{color:props.mode==='dark'?'white':'black'}}>
-        <h1 className="text-center" style={{  marginTop: '75px', height: '10vh'}}>About DailyNews</h1>
-       <div style={{backgroundColor:'grey',height:'60vh',padding:'40px', borderRadius:'20px',textAlign:'center'}}>
+        <h1 className="text-center" style={{ margin: '35px 0px', marginTop: '75px', height: '10vh'}}>About DailyNews</h1>
+       <div style={{backgroundColor:'grey',height:'36vh',padding:'20px' }}>
          <p>
           DailyNews is your reliable source for up-to-date news and information from around the world.
           Our team is dedicated to delivering the latest headlines, insightful articles, and engaging stories.
