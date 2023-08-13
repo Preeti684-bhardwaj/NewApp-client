@@ -3,7 +3,7 @@ import Navbar from './component/nav/Navbar';
 import React, { useState } from 'react'
 import News from './component/newdisplay/News'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import Home from './component/newdisplay/Home';
+import Home from './component/home/Home';
 import Footer from './component/footer/Footer';
 import Newsdetail from './component/newsdetail/Newsdatail';
 import About from './component/nav/About'
