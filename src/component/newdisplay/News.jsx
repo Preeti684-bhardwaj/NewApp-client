@@ -13,6 +13,7 @@ const News = (props) => {
   const { category } = useParams();
 
   const [loading, setLoading] = useState(true); // Moved loading state up here
+  const [newsInfo, setNewsInfo] = useState([]);
 
   useEffect(() => {
     // Fetch news based on the selected category
@@ -32,37 +33,15 @@ const News = (props) => {
     fetchData();
   }, [dispatch, category]); // Hide spinner after data is fetched or an error occurs
 
-
-
-
-
-  const [newsInfo, setNewsInfo] = useState([]);
-  const [page, setpage] = useState(1);
-
-
-
-
-
-  News.defaultProps = {
-    pageSize: 6,
-  }
-
   News.propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
   }
 
   const fetchMoreData = async () => {
-    setpage(page + 1);
     setNewsInfo(newsInfo.concat(news));
-    setLoading(false);
   }
 
-
-
-  // useEffect(() => {
-  //   document.title = `${category.charAt(0).toUpperCase() + category.slice(1)} - DailyNews`;
-  // }, [category]);
   return (
     <>
       <div className='container' style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>

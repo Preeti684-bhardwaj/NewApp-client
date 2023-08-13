@@ -7,11 +7,12 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Spinner from '../newdisplay/Spinner';
 
-const News = (props) => {
+const Home = (props) => {
   const { news } = useSelector(state => state.getnewsdata);
   const dispatch = useDispatch();
   const { category } = useParams();
-
+  
+  const [newsInfo, setNewsInfo] = useState([]);
   const [loading, setLoading] = useState(true); // Moved loading state up here
 
   useEffect(() => {
@@ -32,37 +33,15 @@ const News = (props) => {
     fetchData();
   }, [dispatch, category]); // Hide spinner after data is fetched or an error occurs
 
-
-
-
-
-  const [newsInfo, setNewsInfo] = useState([]);
-  const [page, setpage] = useState(1);
-
-
-
-
-
-  News.defaultProps = {
-    pageSize: 6,
-  }
-
-  News.propTypes = {
+  Home.propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
   }
 
   const fetchMoreData = async () => {
-    setpage(page + 1);
     setNewsInfo(newsInfo.concat(news));
-    setLoading(false);
   }
 
-
-
-  // useEffect(() => {
-  //   document.title = `${category.charAt(0).toUpperCase() + category.slice(1)} - DailyNews`;
-  // }, [category]);
   return (
     <>
       <div className='container' style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
@@ -101,8 +80,8 @@ const News = (props) => {
     </>
   )
 }
-News.propTypes = {
+Home.propTypes = {
   mode: PropTypes.string.isRequired
 }
 
-export default News;
+export default Home;

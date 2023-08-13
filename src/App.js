@@ -10,7 +10,6 @@ import About from './component/nav/About'
 
 
 const App = () => {
-  const pageSize = 6;
 
   const[mode,setMode]=useState('light')
 
@@ -34,8 +33,8 @@ const App = () => {
         <Navbar title="Daily News"mode={mode} toggleMode={toggleMode}/>
         <Routes>
           <Route exact path="/about" element={<About mode={mode}/>} />
-          <Route path="/news/:category" element={<News mode={mode} pageSize={pageSize} />} />
-          <Route path="/" element={<Home mode={mode} pageSize={pageSize} />} />
+          <Route path="/news/:category" element={<News mode={mode} />} />
+          <Route path="/" element={<Home mode={mode}/>} />
           <Route exact path="/news/getnews/:id" element={<Newsdetail mode={mode}/>} />
         </Routes>
         <Footer />
