@@ -18,7 +18,7 @@ const Newsdetail = (props) => {
     // console.log([inddata]);
 
     const getinddata = async () => {
-        const host='http://localhost:5000'
+        const host='https://quilted-ludicrous-rotate.glitch.me'
         const res = await fetch(`${host}/news/getnews/${id}`, {
             method: "GET",
             headers: {

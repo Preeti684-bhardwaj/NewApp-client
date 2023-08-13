@@ -1,6 +1,8 @@
-const news = [];
-
-export const getNewsReducer = (state={news},action)=>{
+const initialState = {
+    news: [],
+  };
+  
+  export const getNewsReducer = (state = initialState, action) =>{
     switch(action.type){
         case "SUCCESS_GET_NEWS":
             return {news:action.payload}

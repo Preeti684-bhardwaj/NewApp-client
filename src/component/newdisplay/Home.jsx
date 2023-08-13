@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import NewsItem from './NewsItem';
-import Spinner from './Spinner';
 import PropTypes from 'prop-types';
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import Spinner from './Spinner';
 
 const News = (props) => {
   const { news } = useSelector(state => state.getnewsdata);
@@ -19,7 +19,7 @@ const News = (props) => {
     const fetchData = async () => {
       setLoading(true); // Show spinner when fetching new data
       try {
-        const response = await axios.get(`http://localhost:5000/news/getnews?category=${category}`);
+        const response = await axios.get('http://localhost:5000/news/getallnews');
         dispatch({ type: "SUCCESS_GET_NEWS", payload: response.data });
       } catch (error) {
         dispatch({ type: "FAIL_GET_NEWS", payload: error.response });
@@ -66,10 +66,10 @@ const News = (props) => {
   return (
     <>
       <div className='container' style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-        <h1 className="text-center" style={{ margin: "75px 0px -20px" }}>DailyNews - Top Headlines on {category}</h1>
+        <h1 className="text-center" style={{ margin: "75px 0px -20px" }}>DailyNews - Top Headlines</h1>
         {loading ? (
           <div>
-            <Spinner />
+            <Spinner/>
             <h2 style={{ textAlign: 'center' }}> Loading....</h2>
           </div>
         ) : (
