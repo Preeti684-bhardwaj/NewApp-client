@@ -52,6 +52,11 @@ const Navbar = (props) => {
                                    Entertainment
                                 </NavLink>
                             </li>
+                             <li className="nav-item">
+                                <NavLink className="nav-link" to="/news/sports" onClick={handleCategoryClick}>
+                                   Sports
+                                </NavLink>
+                            </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/news/technology" onClick={handleCategoryClick}>
                                     Technology
