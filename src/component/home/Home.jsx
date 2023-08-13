@@ -5,7 +5,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import Spinner from './Spinner';
+import Spinner from '../newdisplay/Spinner';
 
 const News = (props) => {
   const { news } = useSelector(state => state.getnewsdata);
