@@ -1,6 +1,6 @@
 export const getNews = (category) => async (dispatch) => {
     try {
-      const host = 'http://localhost:5000';
+      const host = 'https://quilted-ludicrous-rotate.glitch.me';
       const data = await fetch(`${host}/news/getnews?category=${category}`, {
         method: "GET",
         headers: {
