@@ -19,7 +19,7 @@ const News = (props) => {
     const fetchData = async () => {
       setLoading(true); // Show spinner when fetching new data
       try {
-        const response = await axios.get(`http://localhost:5000/news/getnews?category=${category}`);
+        const response = await axios.get(`https://quilted-ludicrous-rotate.glitch.me/news/getnews?category=${category}`);
         dispatch({ type: "SUCCESS_GET_NEWS", payload: response.data });
       } catch (error) {
         dispatch({ type: "FAIL_GET_NEWS", payload: error.response });
